@@ -3,6 +3,8 @@ import "./globals.css";
 import Footer from "../Components/Footer/page";
 import Navbar from "../Components/Navbar/Navbar";
 import { ThemeProvider } from "next-themes";
+//import FAQ from "../Components/Faq";
+import Faq from "../Components/Faq/page"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,6 +28,7 @@ export default function RootLayout({ children }) {
         <Navbar />
       
           {children}
+          <Faq/>
           <Footer/>
         </ThemeProvider>
 
