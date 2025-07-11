@@ -29,10 +29,10 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: Mail,
-      text: "hello@squareup.com",
-      href: "mailto:hello@squareup.com",
+      text: "info@websterwork.com",
+      href: "mailto:info@websterwork.com",
     },
-    { icon: Phone, text: "+91 91813 23 2309", href: "tel:+919181323309" },
+    { icon: Phone, text: "+92 326-3377443", href: "tel:+923263377443" },
     { icon: MapPin, text: "Somewhere in the World", href: "#" },
   ];
 
@@ -43,10 +43,10 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center transform rotate-12 hover:rotate-0 transition-transform duration-300">
+            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 via-zinc-900 to-purple-950 rounded-lg flex items-center justify-center transform rotate-45 hover:rotate-0 transition-transform duration-300">
               <Box className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-white">SquareUp</span>
+            <span className="text-2xl font-bold text-white">Websterwork</span>
           </div>
 
           {/* Navigation Links */}
@@ -55,26 +55,25 @@ const Footer = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm font-medium relative group"
+                className="text-gray-300 hover:bg-purple-600 transition-colors duration-300 text-sm font-medium relative group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </nav>
 
           {/* Social Media Icons */}
           <div className="flex items-center space-x-1">
-            <span className="text-gray-400 text-sm mr-4">Stay Connected</span>
             <div className="flex space-x-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors duration-300 group"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300 group"
                   aria-label={social.label}
                 >
-                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
+                  <social.icon className="w-5 h-5 text-purple-500 group-hover:text-white transition-colors duration-300" />
                 </a>
               ))}
             </div>
@@ -92,9 +91,9 @@ const Footer = () => {
                 <a
                   key={index}
                   href={contact.href}
-                  className="flex items-center space-x-2 text-gray-400 hover:text-green-400 transition-colors duration-300 group"
+                  className="flex items-center space-x-2 text-gray-400 hover:text-purple-600 transition-colors duration-300 group"
                 >
-                  <contact.icon className="w-4 h-4 text-green-500 group-hover:text-green-400 transition-colors duration-300" />
+                  <contact.icon className="w-4 h-4 text-purple-500 group-hover:text-purple-600 transition-colors duration-300" />
                   <span className="text-sm">{contact.text}</span>
                 </a>
               ))}
@@ -102,7 +101,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <div className="text-gray-400 text-sm">
-              © 2023 SquareUp. All rights reserved.
+              © 2025 Websterwork. All rights reserved.
             </div>
           </div>
         </div>

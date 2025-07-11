@@ -11,7 +11,9 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/", active: true },
     { name: "Services", href: "/services" },
-    { name: "Work", href: "/Work" },
+    { name: "Work", href: "/work" },
+    { name: "Blogs", href: "/blogs" },
+    { name: "Industries", href: "/industry" },
     { name: "Process", href: "/process" },
     { name: "About", href: "/about" },
     { name: "Careers", href: "/careers" },
@@ -19,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="bg-[#262626] border-b border-[#262626]
+      className="bg-purple-900 border-b border-white
       w-full 
       px-[16px] sm:px-[162px] 
       py-[20px] 
@@ -28,16 +30,16 @@ const Navbar = () => {
     >
       {/* Logo + Text */}
       <div className="flex items-center space-x-2">
-        <div className="bg-[#9EFF00] p-2 rounded-lg">
+        <div className="bg-gradient-to-br from-purple-500 via-zinc-900 to-purple-950 p-2 rounded-lg">
           <Image
-            src="/7Up.png"
+            src="/t.W.png"
             alt="Logo"
             width={24}
             height={24}
             className="md:w-8 md:h-8"
           />
         </div>
-        <span className="text-white font-semibold text-lg">SquareUp</span>
+        <span className="text-white font-semibold text-lg">Websterwork</span>
       </div>
 
       {/* Desktop Nav */}
@@ -47,7 +49,7 @@ const Navbar = () => {
             <Link
               href={link.href}
               className={`px-3 py-2 rounded ${
-                link.active ? "bg-[#2E2E2E]" : "hover:text-[#9EFF00]"
+                link.active ? "bg-[#2E2E2E]" : "hover:text-purple-500"
               }`}
             >
               {link.name}
@@ -59,9 +61,9 @@ const Navbar = () => {
       {/* Desktop ThemeSwitcher + Contact Us */}
       <div className="hidden lg:flex items-center space-x-4">
         <ThemeSwitcher />
-        <button className="bg-[#9EFF00] rounded-2xl px-5 py-2 text-black font-medium text-[18px] leading-[150%] hover:bg-[#262626] hover:text-[#9EFF00] transition-colors duration-300">
+        <Link href="/contacts" className="bg-purple-600 rounded-2xl px-5 py-2 text-black font-medium text-[18px] leading-[150%] hover:bg-[#262626] hover:text-purple-500 transition-colors duration-300">
           Contact Us
-        </button>
+        </Link>
       </div>
 
       {/* Hamburger Icon (Mobile + Tablet) */}
@@ -77,13 +79,13 @@ const Navbar = () => {
 
       {/* Mobile/Tablet Menu */}
       {isOpen && (
-        <div className="lg:hidden fixed top-[106px] sm:top-[100px] lg:top-[100px] left-0 w-full bg-[#262626] text-white px-4 sm:px-6 py-4 flex flex-col space-y-4 z-50">
+        <div className="lg:hidden fixed top-[106px] sm:top-[100px] lg:top-[100px] left-0 w-full bg-zinc-800 text-white px-4 sm:px-6 py-4 flex flex-col space-y-4 z-50">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               className={`block px-3 py-2 rounded ${
-                link.active ? "bg-[#2E2E2E]" : "hover:text-[#9EFF00]"
+                link.active ? "bg-[#2E2E2E]" : "hover:text-purple-500"
               }`}
               onClick={() => setIsOpen(false)}
             >
@@ -91,9 +93,9 @@ const Navbar = () => {
             </Link>
           ))}
           <ThemeSwitcher />
-          <button className="mt-2 bg-[#9EFF00] rounded-2xl px-4 py-2 text-black font-medium text-sm leading-[150%] hover:bg-[#262626] hover:text-[#9EFF00] transition-colors duration-300">
+          <Link href="/contacts" className="mt-2 bg-purple-600 rounded-2xl px-4 py-2 text-black font-medium text-sm leading-[150%] hover:bg-[#262626] hover:text-purple-500 transition-colors duration-300">
             Contact Us
-          </button>
+          </Link>
         </div>
       )}
     </nav>
