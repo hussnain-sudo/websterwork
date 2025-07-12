@@ -6,7 +6,6 @@ export default function ContactPage() {
     fullName: "",
     email: "",
     contactReasons: {
-      webDesign: false,
       mobileAppDesign: false,
       collaboration: false,
       others: false,
