@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import { FaFileAlt } from 'react-icons/fa';
 import { SiZapier, SiSpotify, SiZoom, SiSlack, SiAmazon, SiAdobe } from 'react-icons/si';
 import { Wrench, Settings, Briefcase } from 'lucide-react';
-
+import Contacts from "./contacts/page";
+import Aboutussection from './about/page';
 export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   
@@ -193,6 +194,13 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
+      </section>
+      <section>
+    <Aboutussection isHomepage />
+
+      </section>
+      <section>
+        <Contacts/>
       </section>
     </>
   );
