@@ -1,5 +1,5 @@
 "use client";
-export default function Aboutussection() {
+export default function Aboutussection({ isHomepage = false }) {
   const companydetails = [
     {
       id: 1,
@@ -8,7 +8,7 @@ export default function Aboutussection() {
       name: "John Smith",
       position: "CEO of ChicBoutique",
       avatar: "JS",
-      bgColor: "bg-lime-400"
+      bgColor: "bg-lime-400",
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ export default function Aboutussection() {
       name: "Sarah Johnson",
       position: "Founder of HungryBites",
       avatar: "SJ",
-      bgColor: "bg-lime-400"
+      bgColor: "bg-lime-400",
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ export default function Aboutussection() {
       name: "Mark Thompson",
       position: "CEO of EventMasters",
       avatar: "MT",
-      bgColor: "bg-lime-400"
+      bgColor: "bg-lime-400",
     },
     {
       id: 4,
@@ -35,39 +35,42 @@ export default function Aboutussection() {
       name: "Laura Adams",
       position: "CTO of ProTech Solutions",
       avatar: "LA",
-      bgColor: "bg-lime-400"
+      bgColor: "bg-lime-400",
+    },
+{
+      id: 5,
+      title: "ProTech Solutions turned to SquareUp to automate our workflow",
+      description: "They delivered an exceptional custom software solution. The system has significantly increased our productivity and reduced manual errors. SquareUp's expertise and professionalism have made them a trusted technology partner.",
+      name: "Laura Adams",
+      position: "CTO of ProTech Solutions",
+      avatar: "LA",
+      bgColor: "bg-lime-400",
+    },
+    {
+      id: 6,
+      title: "ProTech Solutions turned to SquareUp to automate our workflow",
+      description: "They delivered an exceptional custom software solution. The system has significantly increased our productivity and reduced manual errors. SquareUp's expertise and professionalism have made them a trusted technology partner.",
+      name: "Laura Adams",
+      position: "CTO of ProTech Solutions",
+      avatar: "LA",
+      bgColor: "bg-lime-400",
     },
 
-{
-      id: 4,
-      title: "ProTech Solutions turned to SquareUp to automate our workflow",
-      description: "They delivered an exceptional custom software solution. The system has significantly increased our productivity and reduced manual errors. SquareUp's expertise and professionalism have made them a trusted technology partner.",
-      name: "Laura Adams",
-      position: "CTO of ProTech Solutions",
-      avatar: "LA",
-      bgColor: "bg-lime-400"
-    },
-{
-      id: 4,
-      title: "ProTech Solutions turned to SquareUp to automate our workflow",
-      description: "They delivered an exceptional custom software solution. The system has significantly increased our productivity and reduced manual errors. SquareUp's expertise and professionalism have made them a trusted technology partner.",
-      name: "Laura Adams",
-      position: "CTO of ProTech Solutions",
-      avatar: "LA",
-      bgColor: "bg-lime-400"
-    }
 
   ];
 
   return (
-    <div className="bg-black min-h-screen">
-      <div 
+    <div
+      className="bg-black overflow-hidden"
+      style={{ height: isHomepage ? "170vh" : "auto" }}
+    >
+      <div
         className="mx-auto border border-gray-600 bg-black"
         style={{
-          width: '1596px',
-          minHeight: '2046px',
-          maxWidth: '100vw',
-          border: '1px solid #262626'
+          width: "1596px",
+          minHeight: isHomepage ? "100%" : "2046px",
+          maxWidth: "100vw",
+          border: "1px solid #262626",
         }}
       >
         <div className="text-center pt-16 pb-20 px-8">
@@ -75,13 +78,17 @@ export default function Aboutussection() {
             What our Clients say About us
           </h1>
           <p className="text-gray-400 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            At SquareUp, we take pride in delivering exceptional digital products and services that drive success for our clients. Here's what some of our satisfied clients have to say about their experience working with us.
+            At SquareUp, we take pride in delivering exceptional digital
+            products and services that drive success for our clients. Here's
+            what some of our satisfied clients have to say about their
+            experience working with us.
           </p>
         </div>
+
         <div className="px-8 pb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
             {companydetails.map((testimonial) => (
-              <div 
+              <div
                 key={testimonial.id}
                 className="bg-zinc-900 border border-zinc-700 rounded-2xl p-8 hover:border-lime-400 transition-all duration-300"
               >
@@ -94,17 +101,15 @@ export default function Aboutussection() {
                   </p>
                 </div>
 
-                {/* Client Info and Button */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
-                    {/* Avatar */}
-                    <div className={`w-12 h-12 ${testimonial.bgColor} rounded-full flex items-center justify-center`}>
+                    <div
+                      className={`w-12 h-12 ${testimonial.bgColor} rounded-full flex items-center justify-center`}
+                    >
                       <span className="text-black font-bold text-sm">
                         {testimonial.avatar}
                       </span>
                     </div>
-                    
-                    {/* Client Details */}
                     <div>
                       <h4 className="text-white font-semibold text-base">
                         {testimonial.name}
@@ -115,7 +120,6 @@ export default function Aboutussection() {
                     </div>
                   </div>
 
-                  {/* Open Website Button */}
                   <button className="bg-lime-400 hover:bg-lime-500 text-black font-semibold px-6 py-2 rounded-lg transition-all duration-200 text-sm">
                     Open Website
                   </button>
@@ -126,7 +130,6 @@ export default function Aboutussection() {
         </div>
       </div>
 
-     
       <style jsx>{`
         @media (max-width: 1596px) {
           .testimonials-container {
@@ -134,13 +137,13 @@ export default function Aboutussection() {
             margin: 0 1rem;
           }
         }
-        
+
         @media (max-width: 1024px) {
           .testimonials-container {
             padding: 2rem 1rem;
           }
         }
-        
+
         @media (max-width: 768px) {
           .testimonials-container {
             padding: 1rem 0.5rem;
