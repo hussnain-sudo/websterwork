@@ -4,28 +4,28 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
-  const splashVideoRef = useRef<HTMLVideoElement | null>(null);
-  const bgVideoRef = useRef<HTMLVideoElement | null>(null);
+  const splashVideoRef = useRef(null);
+  const bgVideoRef = useRef(null);
 
   useEffect(() => {
+    // Ensure this runs only on client
+    if (typeof window === 'undefined') return;
+
     const splashVideo = splashVideoRef.current;
     const bgVideo = bgVideoRef.current;
 
+    // Play splash video
     if (splashVideo) {
       splashVideo.muted = true;
       splashVideo.playsInline = true;
-      splashVideo.autoplay = true;
 
-      const playPromise = splashVideo.play();
-      if (playPromise !== undefined) {
-        playPromise.catch((err) =>
-          console.warn('Splash autoplay failed:', err)
-        );
-      }
+      splashVideo.play().catch((err) => {
+        console.warn('Splash autoplay failed:', err);
+      });
 
       const timeout = setTimeout(() => {
         setShowSplash(false);
-      }, 6000); // match your intro video duration
+      }, 6000);
 
       splashVideo.onended = () => {
         setShowSplash(false);
@@ -34,13 +34,11 @@ export default function Home() {
       return () => clearTimeout(timeout);
     }
 
+    // Play background video
     if (bgVideo) {
-      const bgPlay = bgVideo.play();
-      if (bgPlay !== undefined) {
-        bgPlay.catch((err) =>
-          console.warn('Background video autoplay failed:', err)
-        );
-      }
+      bgVideo.play().catch((err) => {
+        console.warn('Background video autoplay failed:', err);
+      });
     }
   }, []);
 
@@ -64,10 +62,10 @@ export default function Home() {
         </div>
       )}
 
-      {/* MAIN WEBSITE CONTENT */}
+      {/* MAIN CONTENT */}
       <main className={`${showSplash ? 'hidden' : 'block'}`}>
-        <div className="relative h-screen w-full overflow-hidden text-center items-center content-center">
-          {/* Background Video */}
+        <div className="relative h-screen w-full overflow-hidden text-center flex items-center justify-center">
+          {/* BACKGROUND VIDEO */}
           <video
             ref={bgVideoRef}
             autoPlay
@@ -81,17 +79,16 @@ export default function Home() {
             <source src="/videos/binarycode.mp4" type="video/mp4" />
           </video>
 
-          {/* Page Content */}
-          <div className="flex flex-col relative z-10 text-white p-8 text-center justify-center items-center content-center gap-2">
+          {/* TEXT CONTENT */}
+          <div className="relative z-10 text-white p-8 text-center gap-2 max-w-3xl">
             <h1 className="text-4xl font-aquarium">AI-Powered Software Development</h1>
             <h2 className="text-lg md:text-xl text-gray-300 mt-2">
               Smarter Code. Faster Results. Powered by AI.
             </h2>
-            <div className="flex max-w-3xl mt-4">
-              <p className="text-white text-base md:text-lg">
-                We build intelligent, scalable software using cutting-edge AI technologies — tailored to automate workflows, accelerate growth, and drive digital transformation.
-              </p>
-            </div>
+            <p className="text-white text-base md:text-lg mt-4">
+              We build intelligent, scalable software using cutting-edge AI technologies —
+              tailored to automate workflows, accelerate growth, and drive digital transformation.
+            </p>
           </div>
         </div>
       </main>
