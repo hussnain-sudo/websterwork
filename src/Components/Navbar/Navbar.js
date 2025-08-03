@@ -16,7 +16,7 @@ const Navbar = () => {
     { name: "Our Process", href: "/process" },
     { name: "Our Work", href: "/work" },
     { name: "Industries", href: "/industry" },
-    { name: "Blogs", href: "/blogs" },
+    { name: "Blogs", href: "/resources/blogs" },
     { name: "Career", href: "/careers" },
   ];
 
@@ -55,7 +55,7 @@ const Navbar = () => {
             ))}
 
             <Link
-              href="/contact"
+              href="/contacts"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700"
             >
               Contact Us
