@@ -65,7 +65,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen bg-black text-white relative overflow-hidden">
+    <section className="w-full min-h-screen  dark:bg-black text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-96 h-96 border border-gray-700 rounded-full"></div>
         <div className="absolute bottom-20 right-20 w-80 h-80 border border-gray-700 rounded-full"></div>

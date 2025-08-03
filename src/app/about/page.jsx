@@ -39,6 +39,7 @@ export default function Aboutussection({ isHomepage = false }) {
     },
 {
       id: 5,
+      id: 5,
       title: "ProTech Solutions turned to SquareUp to automate our workflow",
       description: "They delivered an exceptional custom software solution. The system has significantly increased our productivity and reduced manual errors. SquareUp's expertise and professionalism have made them a trusted technology partner.",
       name: "Laura Adams",
@@ -46,7 +47,7 @@ export default function Aboutussection({ isHomepage = false }) {
       avatar: "LA",
       bgColor: "bg-lime-400",
     },
-    {
+{
       id: 6,
       title: "ProTech Solutions turned to SquareUp to automate our workflow",
       description: "They delivered an exceptional custom software solution. The system has significantly increased our productivity and reduced manual errors. SquareUp's expertise and professionalism have made them a trusted technology partner.",
