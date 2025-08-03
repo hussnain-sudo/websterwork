@@ -79,14 +79,7 @@ export default function Aboutussection({ isHomepage = false }) {
             What our Clients say About us
           </h1>
           <p className="text-gray-400 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD:src/app/about/page.jsx
-            At SquareUp, we take pride in delivering exceptional digital
-            products and services that drive success for our clients. Here's
-            what some of our satisfied clients have to say about their
-            experience working with us.
-=======
             At SquareUp, we take pride in delivering exceptional digital products and services that drive success for our clients. Here&apos;s what some of our satisfied clients have to say about their experience working with us.
->>>>>>> 05ea687 (modified):src/app/about/page.js
           </p>
         </div>
 
