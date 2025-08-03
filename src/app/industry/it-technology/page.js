@@ -1,8 +1,8 @@
 import React from 'react'
 
-const page = () => {
+function page() {
   return (
-    <div>Industries we Serve</div>
+    <div>IT-Technology</div>
   )
 }
 
