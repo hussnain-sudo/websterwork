@@ -100,7 +100,7 @@ Our Works
         <div className="grid grid-cols-2 gap-50">
           {projects.map((project, index) => (
             <div key={index} className="mb-50">
-              <img src={project.image} alt={project.title} className="w-full h-auto mb-2" />
+              <Image width={200} height={200} src={project.image} alt={project.title} className="w-full h-auto mb-2" />
               <h2 className="text-xl font-semibold">{project.title}</h2>
               <p className="text-sm">{project.description}</p>
               <a href={project.link} className="text-blue-400 underline">Visit Site</a>

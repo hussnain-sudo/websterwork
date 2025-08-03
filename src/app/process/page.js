@@ -328,20 +328,20 @@ function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <div className="bg-gray-800 p-4 md:p-6 rounded-lg text-center">
               <p className="text-sm md:text-base mb-4 italic">
-                "SquareUp transformed our business with their innovative
-                solutions. Highly recommend!"
+                &quot;SquareUp transformed our business with their innovative
+                solutions. Highly recommend!&quot;
               </p>
               <p className="font-semibold">John Doe, CEO of TechCorp</p>
             </div>
             <div className="bg-gray-800 p-4 md:p-6 rounded-lg text-center">
               <p className="text-sm md:text-base mb-4 italic">
-                "Amazing team, great communication, and delivered on time!"
+                &quot;Amazing team, great communication, and delivered on time!&quot;
               </p>
               <p className="font-semibold">Jane Smith, Founder of StyleHub</p>
             </div>
             <div className="bg-gray-800 p-4 md:p-6 rounded-lg text-center">
               <p className="text-sm md:text-base mb-4 italic">
-                "Their expertise in design and development is unmatched."
+                &quot;Their expertise in design and development is unmatched.&quot;
               </p>
               <p className="font-semibold">Mike Johnson, CTO of InnovateX</p>
             </div>
